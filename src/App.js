@@ -87,10 +87,18 @@ class App extends Component {
     
     return (
       <div className="page-container">
-        <Nav currentPage={ currentPage } setPage={ this.setPage } togglerOpen={ togglerOpen }/>
-        <Particles className="particles" params={particleSettings} />
-        <NavToggler toggleNav={this.toggleNav} togglerOpen={ togglerOpen }/>
-        <PageHolder currentPage={ currentPage } />
+        <Nav 
+          currentPage={ currentPage }
+          setPage={ this.setPage }
+          togglerOpen={ togglerOpen } />
+        <Particles
+          className="particles"
+          params={particleSettings} />
+        <NavToggler 
+          toggleNav={this.toggleNav} 
+          togglerOpen={ togglerOpen }/>
+        <PageHolder 
+          currentPage={ currentPage } />
       </div>
     );
   }
