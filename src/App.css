@@ -8,6 +8,7 @@
   background-color: #ddd;
   min-height: 100vh;
   max-height: 100%;
+  flex-basis: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
