@@ -1,6 +1,6 @@
 import React from 'react';
 
-const navLink = (props) => {
+const NavLink = (props) => {
   let linkClass;
   
   if(props.name.toLowerCase() === props.currentPage) {
@@ -16,4 +16,4 @@ const navLink = (props) => {
   )
 }
 
-export default navLink;
+export default NavLink;

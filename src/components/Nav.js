@@ -1,6 +1,6 @@
 import React from 'react';
 import Avatar from './Avatar';
-import NavLink from './navLink';
+import NavLink from './NavLink';
 import SocialLinks from './SocialLinks';
 
 const Nav = (props) => {  

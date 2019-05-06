@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 import Particles from 'react-particles-js';
-import NavToggler from './NavToggler';
-import PageHolder from './PageHolder';
+import NavToggler from '../components/NavToggler';
+import PageHolder from '../components/PageHolder';
 import './App.css';
 
 const particleSettings = {

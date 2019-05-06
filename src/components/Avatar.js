@@ -1,5 +1,5 @@
 import React from 'react';
-import avatarImage from './img/dave-web.jpg';
+import avatarImage from '../img/dave-web.jpg';
 
 const Avatar = () => {
   return(
