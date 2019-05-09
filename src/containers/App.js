@@ -56,10 +56,25 @@ class App extends Component {
       togglerOpen: false
     }
 
-    window.addEventListener('resize', this.update);
+    window.addEventListener('resize', this.debounce(this.closeToggler));
   }
 
-  update = () => {
+  debounce = (func, wait = 20, immediate = true) => {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  }
+
+  closeToggler = () => {
     if(window.innerWidth > 768) {
       this.setState({
         togglerOpen: false
