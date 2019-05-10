@@ -196,6 +196,14 @@ p, li {
   margin-bottom: 1rem;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
 a {
   color: #ff8c42;
   text-decoration: underline;

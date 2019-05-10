@@ -20,7 +20,7 @@ const Nav = (props) => {
 
         <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Skills"/>
 
-        {/* <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Work"/> */}
+        <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Work History"/>
 
         <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Contact"/>
 

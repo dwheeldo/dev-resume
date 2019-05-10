@@ -12,7 +12,7 @@ const PageHolder = (props) => {
     showPage = <About />;
   } else if(props.currentPage === 'skills') {
     showPage = <Skills />;
-  } else if(props.currentPage === 'work') {
+  } else if(props.currentPage === 'work history') {
     showPage = <Work />;
   } else if(props.currentPage === 'contact') {
     showPage = <Contact />;
