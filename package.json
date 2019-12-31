@@ -4,6 +4,7 @@
   "homepage": "http://dwheeldo.github.io/dev-resume",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.13.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-particles-js": "^2.6.0",

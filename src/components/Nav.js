@@ -3,17 +3,10 @@ import Avatar from './Avatar';
 import NavLink from './NavLink';
 import SocialLinks from './SocialLinks';
 
-const Nav = (props) => {  
-  let menuClass;
-
-  if(props.togglerOpen === true) {
-    menuClass = "menu-bar show-nav";
-  } else {
-    menuClass = "menu-bar";
-  }
+const Nav = (props) => {
 
   return(
-    <nav className={ menuClass }>
+    <nav className="menu-bar">
       <Avatar/>
       <div className="nav-link-wrapper">
         <NavLink currentPage={props.currentPage} setPage={props.setPage} name="About"/>

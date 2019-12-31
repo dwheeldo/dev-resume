@@ -10,11 +10,11 @@ const NavToggler = (props) => {
   }
   
   return(
-    <div className="nav-toggler" onClick={props.toggleNav}>
+    <button className="nav-toggler" onClick={props.toggleNav}>
       <span className={barClass}></span>
       <span className={barClass}></span>
       <span className={barClass}></span>
-    </div>
+    </button>
   )
 }
 

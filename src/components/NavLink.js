@@ -4,7 +4,7 @@ const NavLink = (props) => {
   let linkClass;
   
   if(props.name.toLowerCase() === props.currentPage) {
-    linkClass = "nav-link active";
+    linkClass = "nav-link nav-link--active";
   } else {
     linkClass = "nav-link";
   }

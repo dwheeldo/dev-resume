@@ -7,6 +7,14 @@ const Work = () => {
       <p className="text-lead-icon"><i className="fas fa-history"></i></p>
       <p>Here's what I've been up to all these years:</p>
       <div className="job blue">
+        <p className="job-role">Front End Developer</p>
+        <p className="job-date"><a href="https://www.wilddogdesign.co.uk/" target="_blank" rel="noopener noreferrer" >Wild Dog Design</a> | June 2019 - present</p>
+        <ul>
+          <li>Developing front end templates for responsive websites based on XD designs</li>
+          <li>Working with the rest of the dev team to improve our build process and make lovely, accessible sites</li>
+        </ul>
+      </div>
+      <div className="job red">
         <p className="job-role">Copywriter / Learning Designer</p>
         <p className="job-date">Freelance | July 2018 - present</p>
         <ul>
@@ -15,7 +23,7 @@ const Work = () => {
           <li>Working closely with clients including <strong>PepsiCo</strong>, <strong>IBM</strong> and <strong>Lloyds Banking Group</strong></li>
         </ul>
       </div>
-      <div className="job red">
+      <div className="job orange">
         <p className="job-role">E-learning Scriptwriter / Developer</p>
         <p className="job-date"><a href="https://www.brightwavegroup.com/" target="_blank" rel="noopener noreferrer" >Brightwave</a>, Brighton | Aug 2011 - Jul 2018</p>
         <ul>
@@ -26,16 +34,6 @@ const Work = () => {
           <li>Communicating with clients to solve technical issues</li>
         </ul>
       </div>
-      <div className="job orange">
-        <p className="job-role">CourseBuilder Developer</p>
-        <p className="job-date">Edvantage (now <a href="https://www.lumesse.com/" target="_blank" rel="noopener noreferrer" >Lumesse</a>), Brighton | Feb - Aug 2011</p>
-        <ul>
-          <li>Developing e-learning courses using CourseBuilder</li>
-          <li>Clients included the <strong>Crown Prosecution Service</strong> and <strong>Lloyds Banking Group</strong></li>
-        </ul>
-      </div>
-      
-      
     </div>
   )
 }

@@ -3,7 +3,8 @@ import Nav from '../components/Nav';
 import Particles from 'react-particles-js';
 import NavToggler from '../components/NavToggler';
 import PageHolder from '../components/PageHolder';
-import './App.css';
+import './App.scss';
+import '../css/main.scss';
 
 const particleSettings = {
   "particles": {
@@ -53,7 +54,7 @@ class App extends Component {
     super(props)
     this.state = {
       currentPage: 'about',
-      togglerOpen: false
+      bodyClass: 'page-container'
     }
 
     window.addEventListener('resize', this.debounce(this.closeToggler));
@@ -77,8 +78,8 @@ class App extends Component {
   closeToggler = () => {
     if(window.innerWidth > 768) {
       this.setState({
-        togglerOpen: false
-      })
+        bodyClass: 'page-container'
+      });
     }
   }
 
@@ -87,31 +88,42 @@ class App extends Component {
     
     this.setState({
       currentPage: link.textContent.toLowerCase(),
-      togglerOpen: false
+      bodyClass: 'page-container'
     });
   }
 
   toggleNav = () => {
-    this.setState(state => ({
-      togglerOpen: !state.togglerOpen
-    }))
+    this.setBodyClass();
+  }
+
+  setBodyClass = () => {
+    if (this.state.bodyClass === 'page-container') {
+      this.setState({
+        bodyClass: 'page-container is-visible-mobile-menu'
+      })
+    } else {
+      this.setState({
+        bodyClass: 'page-container'
+      })
+    }
   }
 
   render() {
-    const { currentPage, togglerOpen } = this.state;
+    const { currentPage, bodyClass } = this.state;
     
     return (
-      <div className="page-container">
+      <div className={ bodyClass }>
         <Nav 
           currentPage={ currentPage }
           setPage={ this.setPage }
-          togglerOpen={ togglerOpen } />
+          bodyClass={ bodyClass } />
         <Particles
           className="particles"
           params={particleSettings} />
         <NavToggler 
-          toggleNav={this.toggleNav} 
-          togglerOpen={ togglerOpen }/>
+          toggleNav={this.toggleNav}
+          bodyClass={ bodyClass }
+          />
         <PageHolder 
           currentPage={ currentPage } />
       </div>
