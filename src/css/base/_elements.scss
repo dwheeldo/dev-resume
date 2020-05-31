@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: .3rem;
+
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  color: $color--grey;
+  font-size: 1.2rem;
+  font-weight: normal;
+
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin: 0 0 1em;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0 0 .5em;
+  font-size: 1rem;
+}
+
+a {
+  color: $color--orange;
+  text-decoration: underline;
+  transition: color.15s ease-in;
+
+  &:hover,
+  &:focus {
+    color: $color--black;
+  }
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Skills = () => {
-  return(
-    <div className="intro-text">
-      <p className="text-lead-icon"><i className="fas fa-code"></i></p>
+  return (
+    <div className="c-intro">
+      <p className="c-intro__icon"><i className="fas fa-code"></i></p>
       <p>Like all good developers, I'm learning all the time, so this list is expanding by the day...</p>
       <ul>
         <li className="css">Responsive web development using semantic HTML5 and Sass/CSS3, mainly from scratch, but I've also used a range of boilerplate frameworks</li>

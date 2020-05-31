@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Nav from '../components/Nav';
 import Particles from 'react-particles-js';
-import NavToggler from '../components/NavToggler';
-import PageHolder from '../components/PageHolder';
+import Main from '../components/Main';
 import './App.scss';
-import '../css/main.scss';
+import '../css/styles.scss';
 
 const particleSettings = {
   "particles": {
@@ -54,7 +53,7 @@ class App extends Component {
     super(props)
     this.state = {
       currentPage: 'about',
-      bodyClass: 'page-container'
+      bodyClass: 'o-wrapper'
     }
 
     window.addEventListener('resize', this.debounce(this.closeToggler));
@@ -62,9 +61,9 @@ class App extends Component {
 
   debounce = (func, wait = 20, immediate = true) => {
     var timeout;
-    return function() {
+    return function () {
       var context = this, args = arguments;
-      var later = function() {
+      var later = function () {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
@@ -76,19 +75,19 @@ class App extends Component {
   }
 
   closeToggler = () => {
-    if(window.innerWidth > 768) {
+    if (window.innerWidth > 768) {
       this.setState({
-        bodyClass: 'page-container'
+        bodyClass: 'o-wrapper'
       });
     }
   }
 
   setPage = (e) => {
     const link = e.target;
-    
+
     this.setState({
       currentPage: link.textContent.toLowerCase(),
-      bodyClass: 'page-container'
+      bodyClass: 'o-wrapper'
     });
   }
 
@@ -97,35 +96,32 @@ class App extends Component {
   }
 
   setBodyClass = () => {
-    if (this.state.bodyClass === 'page-container') {
+    if (this.state.bodyClass === 'o-wrapper') {
       this.setState({
-        bodyClass: 'page-container is-visible-mobile-menu'
+        bodyClass: 'o-wrapper is-visible--mobile-menu'
       })
     } else {
       this.setState({
-        bodyClass: 'page-container'
+        bodyClass: 'o-wrapper'
       })
     }
   }
 
   render() {
     const { currentPage, bodyClass } = this.state;
-    
+
     return (
-      <div className={ bodyClass }>
-        <Nav 
-          currentPage={ currentPage }
-          setPage={ this.setPage }
-          bodyClass={ bodyClass } />
+      <div className={bodyClass}>
+        <Nav
+          currentPage={currentPage}
+          setPage={this.setPage}
+          bodyClass={bodyClass}
+          toggleNav={this.toggleNav} />
         <Particles
           className="particles"
           params={particleSettings} />
-        <NavToggler 
-          toggleNav={this.toggleNav}
-          bodyClass={ bodyClass }
-          />
-        <PageHolder 
-          currentPage={ currentPage } />
+        <Main
+          currentPage={currentPage} />
       </div>
     );
   }

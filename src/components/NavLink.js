@@ -2,15 +2,15 @@ import React from 'react';
 
 const NavLink = (props) => {
   let linkClass;
-  
-  if(props.name.toLowerCase() === props.currentPage) {
-    linkClass = "nav-link nav-link--active";
+
+  if (props.name.toLowerCase() === props.currentPage) {
+    linkClass = "c-nav__link c-nav__link--active";
   } else {
-    linkClass = "nav-link";
+    linkClass = "c-nav__link";
   }
-  
-  return(
-    <div className={ linkClass } onClick={props.setPage}>
+
+  return (
+    <div className={linkClass} onClick={props.setPage}>
       {props.name}
     </div>
   )

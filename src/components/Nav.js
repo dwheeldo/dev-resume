@@ -1,25 +1,29 @@
 import React from 'react';
 import Avatar from './Avatar';
+import NavToggler from './NavToggler';
 import NavLink from './NavLink';
 import SocialLinks from './SocialLinks';
 
 const Nav = (props) => {
 
-  return(
-    <nav className="menu-bar">
-      <Avatar/>
-      <div className="nav-link-wrapper">
-        <NavLink currentPage={props.currentPage} setPage={props.setPage} name="About"/>
+  return (
+    <header role="banner" className="c-nav">
+      <div className="c-nav__wrapper">
+        <Avatar />
+        <nav role="navigation" className="c-nav__links">
+          <NavLink currentPage={props.currentPage} setPage={props.setPage} name="About" />
 
-        <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Skills"/>
+          <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Skills" />
 
-        <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Work History"/>
+          <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Work History" />
 
-        <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Contact"/>
+          <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Contact" />
 
-        <SocialLinks />
+          <SocialLinks />
+        </nav>
       </div>
-    </nav>
+      <NavToggler toggleNav={props.toggleNav} />
+    </header>
   )
 }
 

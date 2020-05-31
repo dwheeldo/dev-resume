@@ -1,0 +1,7 @@
+@mixin line {
+  display: block;
+  width: 1.4rem;
+  height: 2px;
+  background: $color--black;
+  transition: transform .15s ease-in;
+}

@@ -1,0 +1,118 @@
+.c-nav {
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 100%;
+    flex: 0 0 25%;
+    padding: 2.5rem 2rem;
+    background-color: $color--grey--light;
+  }
+}
+
+  .c-nav__wrapper {
+    @media (max-width: 767px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-height: 100vh;
+      overflow-y: auto;
+      transform: translateY(-100%);
+      transition: transform .3s ease-in;
+      background-color: $color--grey--light;
+
+      .is-visible--mobile-menu & {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .c-nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+    .c-nav__link {
+      text-align: center;
+      margin: 0.75rem 0;
+      cursor: pointer;
+      transition: color .3s ease;
+
+      &:hover,
+      &--active {
+        color: #ff8c42;
+      }
+    }
+
+  .c-nav__socials {
+    display: flex;
+    margin: 0.75rem;
+  }
+
+    .c-nav__socials__link {
+      color: black;
+      font-size: 2rem;
+      margin: 0.5rem;
+      transition: color 200ms ease;
+
+      &:hover {
+        color: #ff8c42;
+      }
+    }
+
+  .c-nav__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+    .c-nav__toggle__bars {
+      @include line;
+      position: relative;
+
+      &::before,
+      &::after {
+        @include line;
+        position: absolute;
+        content: '';
+      }
+
+      &::before {
+        top: -7px;
+      }
+
+      &::after {
+        bottom: -7px;
+      }
+
+      .is-visible--mobile-menu & {
+        transform: rotate(45deg) translateY(-50%);
+
+        &::before {
+          transform: rotate(-90deg) translateX(-7px);
+        }
+
+        &::after {
+          opacity: 0;
+        }
+      }
+    }
