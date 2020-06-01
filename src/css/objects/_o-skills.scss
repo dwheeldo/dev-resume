@@ -15,7 +15,7 @@
     font-weight: 600;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: rem(767)) {
     @include full;
   }
 }

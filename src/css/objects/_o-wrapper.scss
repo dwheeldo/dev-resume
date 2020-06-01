@@ -1,6 +1,6 @@
 .o-wrapper {
 
-  @media (min-width: 768px) {
+  @media (min-width: rem(768)) {
     display: flex;
   }
 }

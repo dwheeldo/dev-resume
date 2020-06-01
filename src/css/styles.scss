@@ -2,6 +2,7 @@
 @import './base/mixins';
 @import './base/page';
 @import './base/elements';
+@import './base/functions';
 
 @import './objects/o-wrapper';
 @import './objects/o-main';
@@ -11,4 +12,5 @@
 
 @import './components/c-nav';
 
+@import './utils/u-helpers';
 @import './utils/z-index';
