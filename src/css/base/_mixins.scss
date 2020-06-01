@@ -5,3 +5,12 @@
   background: $color--black;
   transition: transform .15s ease-in;
 }
+
+@mixin full {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

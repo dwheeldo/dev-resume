@@ -1,31 +1,18 @@
 .o-job {
   padding: 1.5rem;
   margin-bottom: 0.3rem;
+  background-color: $color--blue--light;
 
   @media (max-width: 767px) {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    @include full;
   }
 
-  &--orange {
+  &:nth-child(even) {
     background-color: $color--orange--light;
-  }
-
-  &--blue {
-    background-color: $color--blue--light;
-  }
-
-  &--red {
-    background-color: $color--red--light;
   }
 }
 
   .o-job__role {
-    font-weight: bold;
     margin-bottom: 0;
   }
 
@@ -41,7 +28,6 @@
   }
 
   .o-job__list {
-    list-style: disc;
     margin-left: 1rem;
   }
 

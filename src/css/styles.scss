@@ -5,8 +5,10 @@
 
 @import './objects/o-wrapper';
 @import './objects/o-main';
+@import './objects/o-intro';
+@import './objects/o-job';
+@import './objects/o-skills';
 
-@import './components/c-avatar';
-@import './components/c-intro';
 @import './components/c-nav';
-@import './components/c-work';
+
+@import './utils/z-index';

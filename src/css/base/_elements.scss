@@ -5,6 +5,7 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
+  font-weight: 600;
 }
 
 h1 {
@@ -19,7 +20,7 @@ h1 {
 h2 {
   color: $color--grey;
   font-size: 1.2rem;
-  font-weight: normal;
+  font-weight: 400;
 
   @media (min-width: 1024px) {
     font-size: 1.5rem;
@@ -31,13 +32,8 @@ p {
   font-size: 1rem;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-  margin: 0 0 .5em;
-  font-size: 1rem;
+strong {
+  font-weight: 600;
 }
 
 a {

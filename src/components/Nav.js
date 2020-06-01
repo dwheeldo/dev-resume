@@ -1,28 +1,33 @@
 import React from 'react';
-import Avatar from './Avatar';
-import NavToggler from './NavToggler';
-import NavLink from './NavLink';
+import NavItem from './NavItem';
 import SocialLinks from './SocialLinks';
+import avatarImage from '../img/dave-web.jpg';
 
 const Nav = (props) => {
 
   return (
     <header role="banner" className="c-nav">
       <div className="c-nav__wrapper">
-        <Avatar />
+        <div className="c-nav__avatar">
+          <img className="c-nav__avatar__img" src={avatarImage} alt="Me" />
+        </div>
+
         <nav role="navigation" className="c-nav__links">
-          <NavLink currentPage={props.currentPage} setPage={props.setPage} name="About" />
+          <NavItem to="/" name="Home" closeNav={props.closeNav} />
 
-          <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Skills" />
+          <NavItem to="/skills" name="Skills" closeNav={props.closeNav} />
 
-          <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Work History" />
+          <NavItem to="/work" name="Work History" closeNav={props.closeNav} />
 
-          <NavLink currentPage={props.currentPage} setPage={props.setPage} name="Contact" />
+          <NavItem to="/contact" name="Contact" closeNav={props.closeNav} />
 
           <SocialLinks />
         </nav>
       </div>
-      <NavToggler toggleNav={props.toggleNav} />
+
+      <button className="c-nav__toggle" onClick={props.toggleNav}>
+        <span className="c-nav__toggle__bars"></span>
+      </button>
     </header>
   )
 }

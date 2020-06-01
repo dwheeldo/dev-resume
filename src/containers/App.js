@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import Nav from '../components/Nav';
 import Particles from 'react-particles-js';
+import debounce from 'lodash.debounce';
+
+import Nav from '../components/Nav';
 import Main from '../components/Main';
-import './App.scss';
+
+import 'normalize.css';
 import '../css/styles.scss';
 
 const particleSettings = {
@@ -52,76 +55,42 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      currentPage: 'about',
-      bodyClass: 'o-wrapper'
+      navOpen: false
     }
 
-    window.addEventListener('resize', this.debounce(this.closeToggler));
+    window.addEventListener('resize', debounce(this.checkDeviceSize));
   }
 
-  debounce = (func, wait = 20, immediate = true) => {
-    var timeout;
-    return function () {
-      var context = this, args = arguments;
-      var later = function () {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  }
-
-  closeToggler = () => {
-    if (window.innerWidth > 768) {
-      this.setState({
-        bodyClass: 'o-wrapper'
-      });
+  checkDeviceSize = () => {
+    if (window.innerWidth > 767) {
+      this.closeNav();
+    } else {
+      return;
     }
-  }
-
-  setPage = (e) => {
-    const link = e.target;
-
-    this.setState({
-      currentPage: link.textContent.toLowerCase(),
-      bodyClass: 'o-wrapper'
-    });
   }
 
   toggleNav = () => {
-    this.setBodyClass();
+    this.setState(state => ({ navOpen: !state.navOpen }));
   }
 
-  setBodyClass = () => {
-    if (this.state.bodyClass === 'o-wrapper') {
-      this.setState({
-        bodyClass: 'o-wrapper is-visible--mobile-menu'
-      })
-    } else {
-      this.setState({
-        bodyClass: 'o-wrapper'
-      })
-    }
+  closeNav = () => {
+    this.setState({
+      navOpen: false
+    });
   }
 
   render() {
-    const { currentPage, bodyClass } = this.state;
+    const { navOpen } = this.state;
 
     return (
-      <div className={bodyClass}>
+      <div className={navOpen ? 'o-wrapper is-visible--mobile-menu' : 'o-wrapper'}>
         <Nav
-          currentPage={currentPage}
-          setPage={this.setPage}
-          bodyClass={bodyClass}
-          toggleNav={this.toggleNav} />
+          toggleNav={this.toggleNav}
+          closeNav={this.closeNav} />
         <Particles
           className="particles"
           params={particleSettings} />
-        <Main
-          currentPage={currentPage} />
+        <Main />
       </div>
     );
   }

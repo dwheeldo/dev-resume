@@ -4,11 +4,13 @@
   "homepage": "http://dwheeldo.github.io/dev-resume",
   "private": true,
   "dependencies": {
-    "node-sass": "^4.13.0",
+    "lodash.debounce": "^4.0.8",
+    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-particles-js": "^2.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-particles-js": "^2.7.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.0"
   },
   "scripts": {
@@ -35,6 +37,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.2.0"
   }
 }

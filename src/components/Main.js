@@ -1,30 +1,25 @@
 import React from 'react';
-import About from './About';
+import { Route, Switch } from 'react-router-dom';
+import Home from './Home';
 import Skills from './Skills';
 import Work from './Work';
 import Contact from './Contact';
 
-const PageHolder = (props) => {
-  let showPage;
-
-  if (props.currentPage === 'about') {
-    showPage = <About />;
-  } else if (props.currentPage === 'skills') {
-    showPage = <Skills />;
-  } else if (props.currentPage === 'work history') {
-    showPage = <Work />;
-  } else if (props.currentPage === 'contact') {
-    showPage = <Contact />;
-  }
+const Main = () => {
 
   return (
     <div role="main" className="o-main">
       <h1>David Wheeldon</h1>
       <h2>Front End Developer</h2>
-      {showPage}
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/skills' component={Skills} />
+        <Route path='/work' component={Work} />
+        <Route path='/contact' component={Contact} />
+      </Switch>
     </div>
   )
 
 }
 
-export default PageHolder;
+export default Main;

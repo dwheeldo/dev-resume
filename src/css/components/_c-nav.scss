@@ -1,4 +1,5 @@
 .c-nav {
+  position: relative;
 
   @media (min-width: 768px) {
     display: flex;
@@ -16,12 +17,13 @@
     @media (max-width: 767px) {
       position: fixed;
       top: 0;
-      left: 0;
       right: 0;
+      bottom: 0;
+      left: 0;
       max-height: 100vh;
       overflow-y: auto;
       transform: translateY(-100%);
-      transition: transform .3s ease-in;
+      transition: transform .3s ease-in-out;
       background-color: $color--grey--light;
 
       .is-visible--mobile-menu & {
@@ -29,6 +31,23 @@
       }
     }
   }
+
+    .c-nav__avatar {
+      width: 100%;
+      max-width: 12rem;
+      margin: 0 auto 1rem;
+
+      @media (max-width: 767px) {
+        margin-top: 1.5rem;
+      }
+    }
+
+      .c-nav__avatar__img {
+        display: block;
+        max-width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+      }
 
   .c-nav__links {
     display: flex;
@@ -38,30 +57,37 @@
   }
 
     .c-nav__link {
+      color: $color--black;
       text-align: center;
+      text-decoration: none;
       margin: 0.75rem 0;
-      cursor: pointer;
       transition: color .3s ease;
 
       &:hover,
+      &:focus,
       &--active {
-        color: #ff8c42;
+        color: $color--orange;
       }
     }
 
   .c-nav__socials {
     display: flex;
-    margin: 0.75rem;
+    justify-content: center;
+    margin: 0.75rem auto;
   }
 
     .c-nav__socials__link {
-      color: black;
+      display: inline-block;
+      color: $color--black;
       font-size: 2rem;
-      margin: 0.5rem;
-      transition: color 200ms ease;
 
-      &:hover {
-        color: #ff8c42;
+      &:not(:first-child) {
+        margin-left: 1rem;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color--orange;
       }
     }
 

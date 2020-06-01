@@ -1,0 +1,21 @@
+.o-skills {
+  list-style: none;
+}
+
+.o-skill {
+  margin: 0 0 .3rem;
+  padding: 1.5rem;
+  background-color: $color--blue--light;
+
+  &:nth-child(even) {
+    background-color: $color--orange--light;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  @media (max-width: 767px) {
+    @include full;
+  }
+}
