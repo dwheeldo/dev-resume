@@ -16,6 +16,7 @@ const Main = () => {
         <Route path='/skills' component={Skills} />
         <Route path='/work' component={Work} />
         <Route path='/contact' component={Contact} />
+        <Route default component={Home} />
       </Switch>
     </div>
   )
