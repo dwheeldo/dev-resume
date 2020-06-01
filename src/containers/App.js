@@ -29,7 +29,7 @@ const particleSettings = {
     },
     "opacity": {
       "value": 0.4,
-      "random": true
+      "random": false
     },
     "size": {
       "value": 3,
