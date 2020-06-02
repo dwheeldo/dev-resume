@@ -1,7 +1,6 @@
 {
   "name": "new-cv-react",
   "version": "0.1.0",
-  "homepage": ".",
   "private": true,
   "dependencies": {
     "lodash.debounce": "^4.0.8",
