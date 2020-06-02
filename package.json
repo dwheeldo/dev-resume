@@ -1,7 +1,7 @@
 {
   "name": "new-cv-react",
   "version": "0.1.0",
-  "homepage": "http://dwheeldo.github.io/dev-resume",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "lodash.debounce": "^4.0.8",
