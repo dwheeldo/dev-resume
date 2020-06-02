@@ -5,9 +5,6 @@ import debounce from 'lodash.debounce';
 import Nav from '../components/Nav';
 import Main from '../components/Main';
 
-import 'normalize.css';
-import '../css/styles.scss';
-
 const particleSettings = {
   "particles": {
     "number": {
