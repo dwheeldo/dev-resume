@@ -1,9 +1,13 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 const Skills = () => {
   return (
     <div className="o-content">
-      <p className="o-content__icon"><i className="fas fa-code"></i></p>
+      <p className="o-content__icon">
+        <FontAwesomeIcon icon={faCode} />
+      </p>
       <p>This list gives a decent impression of what I can do. I've dabbled with plenty of other bits and pieces too, but these are the skills I use on a daily basis.</p>
 
       <ul className="o-skills">

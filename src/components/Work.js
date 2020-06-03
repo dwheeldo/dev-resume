@@ -1,9 +1,13 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHistory } from '@fortawesome/free-solid-svg-icons';
 
 const Work = () => {
   return (
     <div className="o-content">
-      <p className="o-content__icon"><i className="fas fa-history"></i></p>
+      <p className="o-content__icon">
+        <FontAwesomeIcon icon={faHistory} />
+      </p>
       <p>Here's what I've been up to all these years:</p>
 
       <div className="o-jobs">
