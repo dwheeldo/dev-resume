@@ -13,7 +13,7 @@ const Work = () => {
       <div className="o-jobs">
         <div className="o-job">
           <h4 className="o-job__role">Front End Developer</h4>
-          <p className="o-job__date"><a href="https://www.wilddogdesign.co.uk/" target="_blank" rel="noopener noreferrer" >Wild Dog Design</a> | June 2019 - present</p>
+          <p className="o-job__date"><a href="https://www.wilddogdesign.co.uk/" target="_blank" rel="noopener noreferrer" >Wild Dog Design</a> | May 2019 - present</p>
           <ul className="o-job__list">
             <li className="o-job__list__item">Developing front end templates for use with Wordpress CMS</li>
             <li className="o-job__list__item">Working with the rest of the dev team to keep our build processes aligned with the latest standards and make pretty, accessible sites</li>
@@ -21,7 +21,7 @@ const Work = () => {
         </div>
         <div className="o-job">
           <h4 className="o-job__role">Copywriter / Learning Designer</h4>
-          <p className="o-job__date">Freelance | July 2018 - present</p>
+          <p className="o-job__date">Freelance | July 2018 - May 2019</p>
           <ul className="o-job__list">
             <li className="o-job__list__item">Creating engaging copy for web, video, audio and printed materials</li>
             <li className="o-job__list__item">Designing and writing online training solutions</li>
