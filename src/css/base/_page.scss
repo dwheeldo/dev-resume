@@ -12,6 +12,11 @@ body {
   overflow-y: auto;
   -webkit-font-smoothing: antialiased; /* Chrome, Safari */
   -moz-osx-font-smoothing: grayscale; /* Firefox */
+  background-image: url('../img/pattern-randomized.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background by SVGBackgrounds.com */
 }
 
 .particles {
