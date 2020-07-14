@@ -15,8 +15,9 @@ const Work = () => {
           <h4 className="o-job__role">Front End Developer</h4>
           <p className="o-job__date"><a href="https://www.wilddogdesign.co.uk/" target="_blank" rel="noopener noreferrer" >Wild Dog Design</a> | May 2019 - present</p>
           <ul className="o-job__list">
-            <li className="o-job__list__item">Developing front end templates for use with Wordpress CMS</li>
-            <li className="o-job__list__item">Working with the rest of the dev team to keep our build processes aligned with the latest standards and make pretty, accessible sites</li>
+            <li className="o-job__list__item">Developing front end web pages using SCSS, JavaScript and the <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener noreferrer">Nunjucks</a> templating engine</li>
+            <li className="o-job__list__item">Working on <a href="https://wilddogcanvas.com/" target="_blank" rel="noopener noreferrer">Canvas</a>, a SaaS powered by Vue to generate trip itineraries for holiday companies</li>
+            <li className="o-job__list__item">Collaborating with the dev team to keep our build processes aligned with the latest standards</li>
           </ul>
         </div>
         <div className="o-job">
@@ -33,10 +34,8 @@ const Work = () => {
           <p className="o-job__date"><a href="https://www.brightwavegroup.com/" target="_blank" rel="noopener noreferrer" >Brightwave</a>, Brighton | Aug 2011 - Jul 2018</p>
           <ul className="o-job__list">
             <li className="o-job__list__item">Writing online training for clients including <strong>Greater Manchester Police</strong>, <strong>O2</strong> and the <strong>British Army</strong></li>
-            <li className="o-job__list__item">Working closely with Subject Matter Experts to write engaging text, audio and video content</li>
             <li className="o-job__list__item">Setting up and developing e-learning courses with Articulate Storyline, Elucidat and Adobe Captivate</li>
-            <li className="o-job__list__item">Developing courses using HTML, XML and CSS in Brightwave's 'Waveform' engine</li>
-            <li className="o-job__list__item">Communicating with clients to solve technical issues</li>
+            <li className="o-job__list__item">Developing courses using HTML, XML and CSS</li>
           </ul>
         </div>
       </div>
