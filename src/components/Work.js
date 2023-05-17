@@ -14,9 +14,9 @@ const Work = () => {
           <h4 className="o-job__role">Web Developer</h4>
           <p className="o-job__date"><a href="https://electricputty.co.uk/" target="_blank" rel="noopener noreferrer" >Electric Putty</a> | October 2020 - present</p>
           <ul className="o-job__list">
-            <li className="o-job__list__item">Creating front end components for Laravel applications using Vue.</li>
-            <li className="o-job__list__item">Handling data requests to and from REST APIs.</li>
+            <li className="o-job__list__item">Developing the front-end framework for Laravel applications, using vanilla JS and Vue.</li>
             <li className="o-job__list__item">Developing and maintaining Craft CMS sites.</li>
+            <li className="o-job__list__item">Creating self-contained Vue and React apps within Craft sites.</li>
           </ul>
         </div>
         <div className="o-job">
