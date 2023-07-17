@@ -1,31 +1,28 @@
-import React from 'react';
 import NavItem from './NavItem';
 import SocialLinks from './SocialLinks';
 import avatarImage from '../img/dave-web.jpg';
 
-const Nav = (props) => {
+const Nav = ({ navItems, closeNav, toggleNav }) => {
+
+  const renderedNavItems = navItems.map((item) => {
+    return <NavItem key={item.label} to={item.path} name={item.label} closeNav={closeNav} />;
+  });
 
   return (
-    <header role="banner" className="c-nav">
-      <div className="c-nav__wrapper">
+    <header role="banner" className="c-nav bg-slate-700">
+      <div className="c-nav__wrapper bg-slate-900 md:bg-transparent">
         <div className="c-nav__avatar">
           <img className="c-nav__avatar__img" src={avatarImage} alt="Me" />
         </div>
 
         <nav role="navigation" className="c-nav__links">
-          <NavItem to="/" name="Home" closeNav={props.closeNav} />
-
-          <NavItem to="/skills" name="Skills" closeNav={props.closeNav} />
-
-          <NavItem to="/work" name="Work History" closeNav={props.closeNav} />
-
-          <NavItem to="/contact" name="Contact" closeNav={props.closeNav} />
+          {renderedNavItems}
 
           <SocialLinks />
         </nav>
       </div>
 
-      <button className="c-nav__toggle" onClick={props.toggleNav}>
+      <button className="c-nav__toggle" onClick={toggleNav}>
         <span className="c-nav__toggle__bars"></span>
       </button>
     </header>

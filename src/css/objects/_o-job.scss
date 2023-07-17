@@ -47,4 +47,8 @@
         color: $color--grey;
       }
     }
+
+    + .o-job__list__item {
+      margin-top: 0.5rem;
+    }
   }

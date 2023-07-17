@@ -1,13 +1,14 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 const Skills = () => {
   return (
     <div className="o-content">
-      <p className="o-content__icon">
-        <FontAwesomeIcon icon={faCode} />
-      </p>
+      <h1 className="text-orange-400 mb-4">
+        <FontAwesomeIcon icon={faCode} className="o-content__icon"/>
+        Skills
+      </h1>
+
       <p>This list gives a decent impression of what I can do. I've dabbled with plenty of other bits and pieces too, but these are the skills I use on a daily basis.</p>
 
       <ul className="o-skills">
@@ -18,7 +19,7 @@ const Skills = () => {
         <li className="o-skill">Building sites using <strong>Craft CMS</strong></li>
         <li className="o-skill">Using package managers (<strong>NPM</strong>, <strong>Yarn</strong>)</li>
         <li className="o-skill">Git version control</li>
-        <li className="o-skill">Configuring build tools (<strong>Webpack</strong>, <strong>Laravel Mix</strong>, <strong>Rollup</strong></li>
+        <li className="o-skill">Configuring build tools (<strong>Webpack</strong>, <strong>Laravel Mix</strong>, <strong>Rollup</strong>)</li>
       </ul>
     </div>
   )

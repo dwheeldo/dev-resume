@@ -8,17 +8,18 @@ h6 {
   font-weight: 600;
 }
 
-h1 {
+h1, .h1 {
   font-size: 1.8rem;
-  margin-bottom: .3rem;
+  margin: 0 0 .3rem;
+  line-height: 1.1;
+  font-weight: 600;
 
   @media (min-width: rem(1024)) {
     font-size: 2rem;
   }
 }
 
-h2 {
-  color: $color--grey;
+h2, .h2 {
   font-size: 1.2rem;
   font-weight: 400;
 
@@ -37,12 +38,12 @@ strong {
 }
 
 a {
-  color: $color--orange;
+  // color: $color--orange;
   text-decoration: underline;
   transition: color.15s ease-in;
 
-  &:hover,
-  &:focus {
-    color: $color--black;
-  }
+  // &:hover,
+  // &:focus {
+  //   color: $color--black;
+  // }
 }

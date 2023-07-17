@@ -1,17 +1,16 @@
-import React from 'react';
 import { NavLink } from "react-router-dom";
 
-const NavItem = (props) => {
+const NavItem = ({ to, name, closeNav }) => {
 
   return (
     <NavLink
-      className="c-nav__link"
-      activeClassName="c-nav__link--active"
-      to={props.to}
-      exact
-      onClick={props.closeNav}
+      className={({ isActive }) =>
+        isActive ? "c-nav__link text-orange-400" : "c-nav__link hover:text-orange-400"
+      }
+      to={to}
+      onClick={closeNav}
     >
-      {props.name}
+      {name}
     </NavLink>
   )
 }

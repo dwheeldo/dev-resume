@@ -1,24 +1,32 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Home from './Home';
-import Skills from './Skills';
-import Work from './Work';
-import Contact from './Contact';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Home from '../pages/Home';
+import Skills from '../pages/Skills';
+import Work from '../pages/Work';
+import Contact from '../pages/Contact';
+import NotFound from '../pages/NotFound';
 
 const Main = () => {
+  const location = useLocation();
+
+  const headingEl =
+    location.pathname === '/'
+      ? <h1>David Wheeldon</h1>
+      : <p className="h1">David Wheeldon</p>;
 
   return (
-    <div role="main" className="o-main">
-      <h1>David Wheeldon</h1>
-      <h2>Front End Developer</h2>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/skills' component={Skills} />
-        <Route path='/work' component={Work} />
-        <Route path='/contact' component={Contact} />
-        <Route default component={Home} />
-      </Switch>
-    </div>
+    <main className="o-main">
+      {headingEl}
+      <p className="h2">Front End Developer</p>
+
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/skills' element={<Skills/>} />
+        <Route path='/work' element={<Work/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='*' element={<NotFound />}/>
+        <Route default element={<Home />} />
+      </Routes>
+    </main>
   )
 
 }

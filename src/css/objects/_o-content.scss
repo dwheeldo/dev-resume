@@ -4,8 +4,11 @@
   max-width: rem(650);
 }
 
-  .o-content__icon {
-    margin-bottom: 0.3rem;
+  .o-content__heading {
     color: $color--orange;
-    font-size: 2.3rem;
+    margin-bottom: 0.8em;
+  }
+
+  .o-content__icon {
+    margin-right: 0.5rem;
   }
