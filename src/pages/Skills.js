@@ -1,25 +1,43 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+import Panel from '../components/Panel';
 
 const Skills = () => {
+
   return (
-    <div className="o-content">
-      <h1 className="text-orange-400 mb-4">
-        <FontAwesomeIcon icon={faCode} className="o-content__icon"/>
+    <div className="">
+      <h1 className="text-orange-400">
+        <FontAwesomeIcon icon={faCode} className="mr-2"/>
         Skills
       </h1>
 
       <p>This list gives a decent impression of what I can do. I've dabbled with plenty of other bits and pieces too, but these are the skills I use on a daily basis.</p>
 
-      <ul className="o-skills">
-        <li className="o-skill">Responsive website development using <strong>HTML5</strong> and <strong>Sass/CSS</strong></li>
-        <li className="o-skill">Front-end <strong>JavaScript</strong> (ES6+)</li>
-        <li className="o-skill">Building single page applications with <strong>React</strong> and <strong>Vue</strong></li>
-        <li className="o-skill">Working with <strong>REST APIs</strong></li>
-        <li className="o-skill">Building sites using <strong>Craft CMS</strong></li>
-        <li className="o-skill">Using package managers (<strong>NPM</strong>, <strong>Yarn</strong>)</li>
-        <li className="o-skill">Git version control</li>
-        <li className="o-skill">Configuring build tools (<strong>Webpack</strong>, <strong>Laravel Mix</strong>, <strong>Rollup</strong>)</li>
+      <ul className="-mb-2">
+        <Panel elementType="li">
+          Responsive website development using <span className="text-orange-400">HTML5</span> and <span className="text-orange-400">Sass/CSS</span>
+        </Panel>
+        <Panel elementType="li">
+          Front-end <span className="text-orange-400">JavaScript</span> (ES6+)
+        </Panel>
+        <Panel elementType="li">
+          Building single page applications with <span className="text-orange-400">React</span> and <span className="text-orange-400">Vue</span>
+        </Panel>
+        <Panel elementType="li">
+          Sending and retrieving data from <span className="text-orange-400">REST APIs</span>
+        </Panel>
+        <Panel elementType="li">
+          Building sites using <span className="text-orange-400">Craft CMS</span>
+        </Panel>
+        <Panel elementType="li">
+          Using package managers (<span className="text-orange-400">NPM</span>, <span className="text-orange-400">Yarn</span>)
+        </Panel>
+        <Panel elementType="li">
+          <span className="text-orange-400">Git</span> version control
+        </Panel>
+        <Panel elementType="li">
+          Configuring build tools (<span className="text-orange-400">Webpack</span>, <span className="text-orange-400">Laravel Mix</span>, <span className="text-orange-400">Rollup</span>)
+        </Panel>
       </ul>
     </div>
   )

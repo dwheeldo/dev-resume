@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    min-width: 320px;
+  }
+
+  body {
+    @apply bg-slate-800 text-gray-100 leading-normal;
+    font-family: "Raleway", sans-serif;
+    line-height: 1.4;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+    -moz-osx-font-smoothing: grayscale; /* Firefox */
+  }
+
+  h1,
+  .h1 {
+    @apply text-xl leading-none font-semibold mb-3 lg:text-2xl;
+  }
+
+  p:not(.h1) + * {
+    @apply mt-4;
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  a {
+    @apply underline transition-colors;
+  }
+}
+
+@layer components {
+  .header {
+    @apply relative z-10 md:flex md:self-start md:flex-col md:items-center md:w-1/4 md:max-h-full md:min-h-screen md:py-8 md:px-8 md:sticky md:top-0 md:bg-slate-700 lg:py-12;
+  }
+
+  .nav-wrapper {
+    @apply fixed inset-0 max-h-screen overflow-y-auto transition-transform -translate-y-full bg-slate-900 py-8 md:static md:max-h-none md:overflow-auto md:transition-none md:translate-y-0 md:bg-transparent md:py-0;
+  }
+
+  .is-visible--mobile-menu .nav-wrapper {
+    @apply translate-y-0;
+  }
+
+  .nav-links {
+    @apply flex flex-col items-center my-6;
+  }
+
+  .nav-item {
+    @apply text-center no-underline mb-3;
+  }
+
+  .nav-toggle {
+    @apply flex items-center justify-center w-6 h-6 md:hidden;
+  }
+
+  .nav-toggle__bars {
+    @apply bg-gray-100 relative block w-6 h-[2px] transition-transform;
+  }
+
+  .nav-toggle__bars::before,
+  .nav-toggle__bars::after {
+    @apply bg-gray-100 absolute block w-6 h-[2px] transition-transform;
+    content: '';
+  }
+
+  .nav-toggle__bars::before {
+    top: -7px;
+  }
+
+  .nav-toggle__bars::after {
+    bottom: -7px;
+  }
+
+  .is-visible--mobile-menu .nav-toggle__bars {
+    transform: rotate(45deg) translateY(-50%);
+  }
+
+  .is-visible--mobile-menu .nav-toggle__bars::before {
+    transform: rotate(-90deg) translateX(-7px);
+  }
+
+  .is-visible--mobile-menu .nav-toggle__bars::after {
+    opacity: 0;
+  }
+}

@@ -13,15 +13,15 @@ const socialLinks = () => {
   };
 
   return (
-    <div className="c-nav__socials">
+    <div className="flex justify-center mt-8">
       <a href="https://github.com/dwheeldo" target="_blank" rel="noopener noreferrer" className={getClasses(true)}>
         <FontAwesomeIcon icon={faGithub} />
-        <span className="u-a11y">Github</span>
+        <span className="sr-only">Github</span>
       </a>
 
       <a href="https://www.linkedin.com/in/david-wheeldon-7043b516b" target="_blank" rel="noopener noreferrer" className={getClasses()}>
         <FontAwesomeIcon icon={faLinkedin} />
-        <span className="u-a11y">LinkedIn</span>
+        <span className="sr-only">LinkedIn</span>
       </a>
     </div>
   )

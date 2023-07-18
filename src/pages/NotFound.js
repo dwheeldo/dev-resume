@@ -4,13 +4,13 @@ import { faBug } from '@fortawesome/free-solid-svg-icons';
 
 const NotFound = () => {
   return (
-    <div className="o-content">
+    <div className="">
       <h1 className="text-orange-400 mb-4">
-        <FontAwesomeIcon icon={faBug} className="o-content__icon"/>
+        <FontAwesomeIcon icon={faBug} className="mr-2"/>
         404: not found
       </h1>
 
-      <p className="u-lede">
+      <p className="text-lg">
         Dang, the page you're looking for doesn't exist.
       </p>
       <p><NavLink to="/">Return to the homepage</NavLink>.</p>

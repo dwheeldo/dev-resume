@@ -10,13 +10,15 @@ const Main = () => {
 
   const headingEl =
     location.pathname === '/'
-      ? <h1>David Wheeldon</h1>
-      : <p className="h1">David Wheeldon</p>;
+      ? <h1 className='mb-1'>David Wheeldon</h1>
+      : <p className="h1 mb-1">David Wheeldon</p>;
 
   return (
-    <main className="o-main">
-      {headingEl}
-      <p className="h2">Front End Developer</p>
+    <main className="w-full max-w-screen-md mx-auto p-4 md:p-8 lg:p-12">
+      <div className="pb-4 mb-6 border-b border-white">
+        {headingEl}
+        <p className="text-lg leading-none lg:text-xl">Front End Developer</p>
+      </div>
 
       <Routes>
         <Route path='/' element={<Home/>} />

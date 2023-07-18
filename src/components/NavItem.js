@@ -5,7 +5,7 @@ const NavItem = ({ to, name, closeNav }) => {
   return (
     <NavLink
       className={({ isActive }) =>
-        isActive ? "c-nav__link text-orange-400" : "c-nav__link hover:text-orange-400"
+        isActive ? "nav-item text-orange-400" : "nav-item hover:text-orange-400"
       }
       to={to}
       onClick={closeNav}

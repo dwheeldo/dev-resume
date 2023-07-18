@@ -9,22 +9,26 @@ const Nav = ({ navItems, closeNav, toggleNav }) => {
   });
 
   return (
-    <header role="banner" className="c-nav bg-slate-700">
-      <div className="c-nav__wrapper bg-slate-900 md:bg-transparent">
-        <div className="c-nav__avatar">
-          <img className="c-nav__avatar__img" src={avatarImage} alt="Me" />
+    <header role="banner" className="header">
+      <div className="nav-wrapper">
+        <div className="max-w-[12rem] mx-auto mb-4">
+          <img className="block max-w-full rounded-full overflow-hidden" src={avatarImage} alt="Me" />
         </div>
 
-        <nav role="navigation" className="c-nav__links">
-          {renderedNavItems}
+        <nav role="navigation" className="mt-8">
+          <div className="flex flex-col items-center -mb-3">
+            {renderedNavItems}
+          </div>
 
           <SocialLinks />
         </nav>
       </div>
 
-      <button className="c-nav__toggle" onClick={toggleNav}>
-        <span className="c-nav__toggle__bars"></span>
-      </button>
+      <div className="absolute top-4 right-4">
+        <button className="nav-toggle flex-shrink-0" onClick={toggleNav}>
+          <span className="nav-toggle__bars"></span>
+        </button>
+      </div>
     </header>
   )
 }
