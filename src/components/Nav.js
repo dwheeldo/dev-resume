@@ -24,7 +24,7 @@ const Nav = ({ navItems, closeNav, toggleNav }) => {
         </nav>
       </div>
 
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-8 right-4">
         <button className="nav-toggle flex-shrink-0" onClick={toggleNav}>
           <span className="nav-toggle__bars"></span>
         </button>

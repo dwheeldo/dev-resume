@@ -3,7 +3,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const socialLinks = () => {
   const getClasses = (first = false) => {
-    let classes = 'text-3xl inline-block hover:text-orange-400';
+    let classes = 'text-3xl block hover:text-orange-400 leading-none';
 
     if (first) {
       classes += ' mr-4'
@@ -13,7 +13,7 @@ const socialLinks = () => {
   };
 
   return (
-    <div className="flex justify-center mt-8">
+    <div className="flex justify-center mt-8 mb-1">
       <a href="https://github.com/dwheeldo" target="_blank" rel="noopener noreferrer" className={getClasses(true)}>
         <FontAwesomeIcon icon={faGithub} />
         <span className="sr-only">Github</span>

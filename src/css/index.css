@@ -33,7 +33,11 @@
   }
 
   a {
-    @apply underline transition-colors;
+    @apply underline underline-offset-2 decoration-1 transition-colors;
+  }
+
+  a:focus {
+    @apply outline-dotted outline outline-offset-2 outline-orange-400;
   }
 }
 
