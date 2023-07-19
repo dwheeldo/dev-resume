@@ -47,19 +47,11 @@
   }
 
   .nav-wrapper {
-    @apply fixed inset-0 max-h-screen overflow-y-auto transition-transform -translate-y-full bg-slate-900 py-8 md:static md:max-h-none md:overflow-auto md:transition-none md:translate-y-0 md:bg-transparent md:py-0;
+    @apply fixed inset-0 overflow-y-auto transition-transform -translate-y-full bg-slate-900 py-8 md:static md:overflow-auto md:transition-none md:translate-y-0 md:bg-transparent md:py-0;
   }
 
   .is-visible--mobile-menu .nav-wrapper {
     @apply translate-y-0;
-  }
-
-  .nav-links {
-    @apply flex flex-col items-center my-6;
-  }
-
-  .nav-item {
-    @apply text-center no-underline mb-3;
   }
 
   .nav-toggle {
