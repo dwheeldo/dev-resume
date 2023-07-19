@@ -47,15 +47,15 @@
   }
 
   .nav-wrapper {
-    @apply fixed inset-0 overflow-y-auto transition-transform -translate-y-full bg-slate-900 py-8 md:static md:overflow-auto md:transition-none md:translate-y-0 md:bg-transparent md:py-0;
+    @apply fixed inset-0 overflow-y-auto transition-transform -translate-x-full bg-slate-800/80 backdrop-blur-sm py-8 md:static md:overflow-auto md:transition-none md:translate-x-0 md:bg-transparent md:backdrop-blur-none md:py-0;
   }
 
   .is-visible--mobile-menu .nav-wrapper {
-    @apply translate-y-0;
+    @apply translate-x-0;
   }
 
   .nav-toggle {
-    @apply flex items-center justify-center w-6 h-6 md:hidden;
+    @apply flex items-center justify-center w-10 h-10 p-2 rounded-full bg-orange-400/80 md:hidden;
   }
 
   .nav-toggle__bars {
