@@ -17,7 +17,7 @@ const Main = () => {
     <main className="w-full max-w-screen-md mx-auto px-4 py-8 md:p-8 lg:p-12">
       <div className="pb-4 mb-6 border-b border-white">
         {headingEl}
-        <p className="text-lg leading-none lg:text-xl">Front End Developer</p>
+        <p className="text-lg leading-none lg:text-xl">Front-end Developer</p>
       </div>
 
       <Routes>

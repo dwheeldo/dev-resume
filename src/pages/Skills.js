@@ -21,22 +21,25 @@ const Skills = () => {
           Front-end <span className="text-orange-400">JavaScript</span> (ES6+)
         </Panel>
         <Panel elementType="li">
-          Building single page applications with <span className="text-orange-400">React</span> and <span className="text-orange-400">Vue</span>
+          Building single page applications with <span className="text-orange-400">Vue</span> and <span className="text-orange-400">React</span>
         </Panel>
         <Panel elementType="li">
           Sending and retrieving data from <span className="text-orange-400">REST APIs</span>
         </Panel>
         <Panel elementType="li">
-          Building sites using <span className="text-orange-400">Craft CMS</span>
+          Building and configuring <span className="text-orange-400">Craft CMS</span> sites
         </Panel>
         <Panel elementType="li">
-          Using package managers (<span className="text-orange-400">NPM</span>, <span className="text-orange-400">Yarn</span>)
+          State management libraries &ndash; <span className="text-orange-400">Vuex</span>, <span className="text-orange-400">Pinia</span>, <span className="text-orange-400">Redux</span>
+        </Panel>
+        <Panel elementType="li">
+          Package managers &ndash; <span className="text-orange-400">NPM</span>, <span className="text-orange-400">Yarn</span>
         </Panel>
         <Panel elementType="li">
           <span className="text-orange-400">Git</span> version control
         </Panel>
         <Panel elementType="li">
-          Configuring build tools (<span className="text-orange-400">Webpack</span>, <span className="text-orange-400">Laravel Mix</span>, <span className="text-orange-400">Rollup</span>)
+          Configuring build tools &ndash; <span className="text-orange-400">Webpack</span>, <span className="text-orange-400">Laravel Mix</span>, <span className="text-orange-400">Rollup</span>
         </Panel>
       </ul>
     </div>
