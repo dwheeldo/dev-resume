@@ -1,15 +1,23 @@
+import useAppContext from '../hooks/use-app-context';
 import NavItem from './NavItem';
 import SocialLinks from './SocialLinks';
 import avatarImage from '../img/dave-web.jpg';
 
-const Nav = ({ navItems, closeNav, toggleNav }) => {
+const Nav = () => {
+  const {
+    navItems,
+    navOpen,
+    toggleNav,
+  } = useAppContext();
 
   const renderedNavItems = navItems.map((item) => {
-    return <NavItem key={item.label} to={item.path} name={item.label} closeNav={closeNav} />;
+    return <NavItem key={item.label} to={item.path} name={item.label} />;
   });
 
+  const headerClasses = navOpen ? 'header mobile-nav-open' : 'header';
+
   return (
-    <header role="banner" className="header">
+    <header role="banner" className={headerClasses}>
       <div className="nav-wrapper">
         <div className="max-w-[12rem] mx-auto mb-4">
           <img className="block max-w-full rounded-full overflow-hidden" src={avatarImage} alt="Me" />

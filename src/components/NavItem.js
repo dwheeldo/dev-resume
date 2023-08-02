@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
+import useAppContext from '../hooks/use-app-context';
 
-const NavItem = ({ to, name, closeNav }) => {
+const NavItem = ({ to, name }) => {
+  const { closeNav } = useAppContext();
 
   return (
     <NavLink

@@ -37,7 +37,7 @@
   }
 
   a:focus {
-    @apply outline-dotted outline outline-offset-2 outline-orange-400;
+    @apply outline-dotted outline-offset-2 outline-orange-400;
   }
 }
 
@@ -50,7 +50,7 @@
     @apply fixed inset-0 overflow-y-auto transition-transform -translate-x-full bg-slate-800/80 backdrop-blur-sm py-8 md:static md:overflow-auto md:transition-none md:translate-x-0 md:bg-transparent md:backdrop-blur-none md:py-0;
   }
 
-  .is-visible--mobile-menu .nav-wrapper {
+  .mobile-nav-open .nav-wrapper {
     @apply translate-x-0;
   }
 
@@ -76,15 +76,15 @@
     bottom: -7px;
   }
 
-  .is-visible--mobile-menu .nav-toggle__bars {
-    transform: rotate(45deg) translateY(-50%);
+  .mobile-nav-open .nav-toggle__bars {
+    transform: rotate(45deg);
   }
 
-  .is-visible--mobile-menu .nav-toggle__bars::before {
+  .mobile-nav-open .nav-toggle__bars::before {
     transform: rotate(-90deg) translateX(-7px);
   }
 
-  .is-visible--mobile-menu .nav-toggle__bars::after {
+  .mobile-nav-open .nav-toggle__bars::after {
     opacity: 0;
   }
 }
