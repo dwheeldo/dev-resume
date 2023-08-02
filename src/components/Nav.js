@@ -35,6 +35,7 @@ const Nav = () => {
       <div className="absolute top-8 right-4">
         <button className="nav-toggle flex-shrink-0" onClick={toggleNav}>
           <span className="nav-toggle__bars"></span>
+          <span className="sr-only">{ navOpen ? 'Close menu' : 'Open menu' }</span>
         </button>
       </div>
     </header>
