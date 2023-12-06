@@ -1,14 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Title from "../components/Title";
 import { faBug } from '@fortawesome/free-solid-svg-icons';
+
 
 const NotFound = () => {
   return (
     <div className="">
-      <h1 className="text-orange-400 mb-4">
-        <FontAwesomeIcon icon={faBug} className="mr-2"/>
-        404: not found
-      </h1>
+      <Title text="404: not found" icon={faBug} />
 
       <p className="text-lg">
         Dang, the page you're looking for doesn't exist.

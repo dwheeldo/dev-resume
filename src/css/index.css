@@ -24,6 +24,10 @@
     @apply text-xl leading-none font-semibold mb-3 lg:text-2xl;
   }
 
+  h2 {
+    @apply leading-none font-semibold lg:text-lg;
+  }
+
   p:not(.h1) + * {
     @apply mt-4;
   }
