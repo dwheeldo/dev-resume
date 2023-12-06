@@ -12,7 +12,7 @@
   body {
     @apply bg-slate-800 text-gray-100 leading-normal;
     font-family: "Raleway", sans-serif;
-    line-height: 1.4;
+    line-height: 1.5;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-font-smoothing: antialiased; /* Chrome, Safari */
@@ -28,7 +28,8 @@
     @apply leading-none font-semibold lg:text-lg;
   }
 
-  p:not(.h1) + * {
+  p:not(.h1) + p,
+  p:not(.h1) + ul {
     @apply mt-4;
   }
 
@@ -40,8 +41,9 @@
     @apply underline underline-offset-2 decoration-1 transition-colors;
   }
 
-  a:focus {
-    @apply outline-dotted outline-offset-2 outline-orange-400;
+  a:focus,
+  button:focus {
+    @apply outline-1 outline-dotted outline-offset-2 outline-orange-400;
   }
 }
 

@@ -6,9 +6,9 @@ export const AppContext = createContext();
 export function AppContextProvider({ children }) {
   const navItems = [
     { path: '/', label: 'Home' },
+    { path: '/portfolio', label: 'Portfolio' },
     { path: '/skills', label: 'Skills' },
     { path: '/work', label: 'Work history' },
-    { path: '/portfolio', label: 'Portfolio' },
     { path: '/contact', label: 'Contact' },
   ];
 

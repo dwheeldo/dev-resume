@@ -20,7 +20,7 @@ const Nav = () => {
     <header role="banner" className={headerClasses}>
       <div className="nav-wrapper">
         <div className="max-w-[12rem] mx-auto mb-4">
-          <img className="block max-w-full rounded-full overflow-hidden" src={avatarImage} alt="Me" />
+          <img className="block max-w-full rounded-full overflow-hidden" src={avatarImage} alt="Me" width="190" height="190" />
         </div>
 
         <nav role="navigation" className="mt-8">
