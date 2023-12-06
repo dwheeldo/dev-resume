@@ -10,9 +10,10 @@ const Home = () => {
       </p>
 
       <p className="text-lg">Hello, I'm Dave, from Brighton in the UK. Pleased to meet you.</p>
+
       <p>I'm a dedicated and detail-oriented developer, passionate about creating high-performance, user-friendly web applications and sites.</p>
 
-      <p>I've worked within agencies since 2019, and pride myself on being friendly and reliable, with excellent communication skills.</p>
+      <p>With a track record of agency experience since 2019 (and 10 years in the e-learning industry before that) I'm known for my friendly demeanour, reliability, and effective communication skills.</p>
 
       <p>Check out my <NavLink to="/portfolio" className="text-orange-400">portfolio</NavLink> and <NavLink to="/skills" className="text-orange-400">skills</NavLink> to see if I can help you build something great.</p>
     </div>
