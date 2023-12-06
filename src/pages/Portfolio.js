@@ -13,7 +13,7 @@ const Portfolio = () => {
         projectName="Rights of Women"
         projectDate="June 2021 - June 2023"
         projectUrl="https://cms.rightsofwomen.org.uk/"
-        intro="An online advice platform for the organisation Rights of Women(ROW)."
+        intro="An online advice platform for the organisation Rights of Women (ROW)."
         imageName="row_dt"
         imageAltText="Rights of Women screenshot"
       >
