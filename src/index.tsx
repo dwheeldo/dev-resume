@@ -5,8 +5,7 @@ import { AppContextProvider } from './context/AppContext';
 import './css/index.css';
 import App from './App';
 
-const container = document.getElementById('app');
-const root = createRoot(container);
+const root = createRoot(document.getElementById('app')!);
 
 root.render(
   <Router>

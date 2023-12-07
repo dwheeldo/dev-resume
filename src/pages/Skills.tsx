@@ -2,13 +2,14 @@ import { useContext } from 'react';
 import parse from 'html-react-parser';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
 import { AppContext } from '../context/AppContext';
+import type { SkillType } from '../types/interfaces';
 import Title from '../components/Title';
 import Panel from '../components/Panel';
 
 const Skills = () => {
   const { skills: skillsList } = useContext(AppContext);
 
-  const renderedSkills = skillsList.map((skill) => {
+  const renderedSkills = skillsList.map((skill: SkillType) => {
     return (
       <Panel elementType="li" key={skill.id}>
         {parse(skill.content)}

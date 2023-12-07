@@ -1,10 +1,11 @@
 import { createContext, useState, useEffect } from 'react';
+import type { NavItemType, SkillType } from '../types/interfaces';
 import debounce from 'lodash.debounce';
 
-export const AppContext = createContext();
+export const AppContext = createContext(null);
 
 export function AppContextProvider({ children }) {
-  const navItems = [
+  const navItems: NavItemType[] = [
     { path: '/', label: 'Home' },
     { path: '/portfolio', label: 'Portfolio' },
     { path: '/skills', label: 'Skills' },
@@ -12,7 +13,7 @@ export function AppContextProvider({ children }) {
     { path: '/contact', label: 'Contact' },
   ];
 
-  const skills = [
+  const skills: SkillType[] = [
     {
       id: 1,
       content: 'Responsive web development using <span className="text-orange-400">HTML</span> and <span className="text-orange-400">CSS/SCSS</span>'

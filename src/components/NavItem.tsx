@@ -1,7 +1,12 @@
 import { NavLink } from "react-router-dom";
 import useAppContext from '../hooks/use-app-context';
 
-const NavItem = ({ to, name }) => {
+interface Props {
+  to: string;
+  name: string;
+}
+
+const NavItem = ({ to, name }: Props) => {
   const { closeNav } = useAppContext();
 
   return (

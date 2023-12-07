@@ -2,6 +2,7 @@ import useAppContext from '../hooks/use-app-context';
 import NavItem from './NavItem';
 import SocialLinks from './SocialLinks';
 import avatarImage from '../img/dave-web.jpg';
+import type { NavItemType } from '../types/interfaces';
 
 const Nav = () => {
   const {
@@ -10,7 +11,7 @@ const Nav = () => {
     toggleNav,
   } = useAppContext();
 
-  const renderedNavItems = navItems.map((item) => {
+  const renderedNavItems = navItems.map((item: NavItemType) => {
     return <NavItem key={item.label} to={item.path} name={item.label} />;
   });
 

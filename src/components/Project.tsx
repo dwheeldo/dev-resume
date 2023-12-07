@@ -2,12 +2,28 @@ import { useMemo, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faLink, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
+interface Props {
+  projectName: string;
+  projectDate: string;
+  projectUrl?: string;
+  intro: string;
+  imageName: string;
+  imageAltText: string;
+  children: React.ReactNode;
+}
+
 const Project = ({
-  projectName, projectDate, projectUrl, intro, imageName, imageAltText, children
-}) => {
+  projectName,
+  projectDate,
+  projectUrl,
+  intro,
+  imageName,
+  imageAltText,
+  children
+}: Props) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const projectNameAsId = useMemo(() => {
+  const projectNameAsId: string = useMemo(() => {
     return `${projectName.toLowerCase().split(' ').join('_')}_panel`;
   }, [projectName]);
 
