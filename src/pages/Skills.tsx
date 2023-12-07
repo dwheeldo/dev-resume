@@ -1,13 +1,12 @@
-import { useContext } from 'react';
 import parse from 'html-react-parser';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
-import { AppContext } from '../context/AppContext';
+import useAppContext from '../hooks/use-app-context';
 import type { SkillType } from '../types/interfaces';
 import Title from '../components/Title';
 import Panel from '../components/Panel';
 
 const Skills = () => {
-  const { skills: skillsList } = useContext(AppContext);
+  const { skills: skillsList } = useAppContext();
 
   const renderedSkills = skillsList.map((skill: SkillType) => {
     return (

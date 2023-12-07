@@ -1,10 +1,12 @@
 import { createContext, useState, useEffect } from 'react';
-import type { NavItemType, SkillType } from '../types/interfaces';
+import type { NavItemType, SkillType, AppContextType } from '../types/interfaces';
 import debounce from 'lodash.debounce';
 
-export const AppContext = createContext(null);
+export const AppContext = createContext<AppContextType | null>(null);
 
-export function AppContextProvider({ children }) {
+export function AppContextProvider(
+  { children }: { children: React.ReactNode }
+) {
   const navItems: NavItemType[] = [
     { path: '/', label: 'Home' },
     { path: '/portfolio', label: 'Portfolio' },
