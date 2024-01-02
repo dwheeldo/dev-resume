@@ -1,14 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHistory } from '@fortawesome/free-solid-svg-icons';
+import Title from '../components/Title';
 import Panel from '../components/Panel';
 
 const Work = () => {
   return (
     <div className="">
-      <h1 className="text-orange-400 mb-4">
-        <FontAwesomeIcon icon={faHistory} className="mr-2"/>
-        Work history
-      </h1>
+      <Title text="Work history" icon={faHistory} />
 
       <ul className="-mb-2">
         <Panel>

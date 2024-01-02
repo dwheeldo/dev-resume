@@ -21,7 +21,7 @@
 
   h1,
   .h1 {
-    @apply text-xl leading-none font-semibold mb-3 lg:text-2xl;
+    @apply text-xl leading-none font-semibold lg:text-2xl;
   }
 
   h2 {

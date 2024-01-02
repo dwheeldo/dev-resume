@@ -21,7 +21,7 @@ const Main = () => {
     <main className="w-full max-w-screen-md mx-auto px-4 py-8 md:p-8 lg:p-12">
       <div className="pb-4 mb-6 border-b border-orange-400 border-dashed">
         <NavLink to="/" className="block mb-1 no-underline" aria-label="Navigate to homepage">
-          <HeadingEl className="h1 mb-0">
+          <HeadingEl className="h1">
             Dave Wheeldon
           </HeadingEl>
         </NavLink>
