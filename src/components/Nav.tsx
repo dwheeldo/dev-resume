@@ -5,11 +5,7 @@ import avatarImage from '../img/dave-web.jpg';
 import type { NavItemType } from '../types/interfaces';
 
 const Nav = () => {
-  const {
-    navItems,
-    navOpen,
-    toggleNav,
-  } = useAppContext();
+  const { navItems, navOpen, toggleNav } = useAppContext();
 
   const renderedNavItems = navItems.map((item: NavItemType) => {
     return <NavItem key={item.label} to={item.path} name={item.label} />;
@@ -21,7 +17,13 @@ const Nav = () => {
     <header role="banner" className={headerClasses}>
       <div className="nav-wrapper">
         <div className="max-w-[12rem] mx-auto mb-4">
-          <img className="block max-w-full rounded-full overflow-hidden" src={avatarImage} alt="Me" width="190" height="190" />
+          <img
+            className="block max-w-full rounded-full overflow-hidden"
+            src={avatarImage}
+            alt="Me"
+            width="190"
+            height="190"
+          />
         </div>
 
         <nav role="navigation" className="mt-8">
@@ -36,11 +38,13 @@ const Nav = () => {
       <div className="absolute top-8 right-4">
         <button className="nav-toggle flex-shrink-0" onClick={toggleNav}>
           <span className="nav-toggle__bars"></span>
-          <span className="sr-only">{ navOpen ? 'Close menu' : 'Open menu' }</span>
+          <span className="sr-only">
+            {navOpen ? 'Close menu' : 'Open menu'}
+          </span>
         </button>
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Nav;

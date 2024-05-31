@@ -20,13 +20,15 @@ const Skills = () => {
     <div className="">
       <Title text="Skills" icon={faWrench} />
 
-      <p>This list gives a decent impression of what I can do. I've dabbled with plenty of other bits and pieces too, but these are the skills I use on a daily basis.</p>
+      <p>
+        This list gives a decent impression of what I can do. I've dabbled with
+        plenty of other bits and pieces too, but these are the skills I use on a
+        daily basis.
+      </p>
 
-      <ul className="mt-4 -mb-2">
-        {renderedSkills}
-      </ul>
+      <ul className="mt-4 -mb-2">{renderedSkills}</ul>
     </div>
-  )
-}
+  );
+};
 
 export default Skills;

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import useAppContext from '../hooks/use-app-context';
 
 interface Props {
@@ -17,14 +17,14 @@ const NavItem = ({ to, name }: Props) => {
         if (isActive) {
           return classes + ' text-orange-400';
         }
-        return classes + ' hover:text-orange-400'
+        return classes + ' hover:text-orange-400';
       }}
       to={to}
       onClick={closeNav}
     >
       {name}
     </NavLink>
-  )
-}
+  );
+};
 
 export default NavItem;

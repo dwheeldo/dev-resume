@@ -17,11 +17,22 @@ const Portfolio = () => {
         imageName="row_dt"
         imageAltText="Rights of Women screenshot"
       >
-        <p>The application centres around an autosaving, multi-page form built with Vue, which enables ROW staff to record their attendance note data from the phone calls received by their advice lines.</p>
+        <p>
+          The application centres around an autosaving, multi-page form built
+          with Vue, which enables ROW staff to record their attendance note data
+          from the phone calls received by their advice lines.
+        </p>
 
-        <p>The form communicates with the Laravel back-end using a combination of API requests and websockets.</p>
+        <p>
+          The form communicates with the Laravel back-end using a combination of
+          API requests and websockets.
+        </p>
 
-        <p>I created and maintained the front-end of the application, and I was involved in making decisions on the technology we used and the overall code architecture.</p>
+        <p>
+          I created and maintained the front-end of the application, and I was
+          involved in making decisions on the technology we used and the overall
+          code architecture.
+        </p>
 
         <p>Technologies used:</p>
 
@@ -44,17 +55,24 @@ const Portfolio = () => {
       >
         <p>BrandStencil is an established web app built using Laravel.</p>
 
-        <p>I worked on a number of features in the application, as well as being responsible for overhauling the front-end architecture. My achievements included:</p>
+        <p>
+          I worked on a number of features in the application, as well as being
+          responsible for overhauling the front-end architecture. My
+          achievements included:
+        </p>
 
         <ul className="list-disc ml-4">
           <li>Created a component library to improve consistency of styling</li>
-          <li>Reduced legacy JavaScript and introduced Vue JS components for complex UI elements</li>
+          <li>
+            Reduced legacy JavaScript and introduced Vue JS components for
+            complex UI elements
+          </li>
           <li>Replaced legacy CSS with Tailwind CSS</li>
           <li>Used CSS variables to make client theming faster and easier</li>
           <li>Implemented AA accessibility standards across the app</li>
         </ul>
 
-        <p className='mt-4'>Technologies used:</p>
+        <p className="mt-4">Technologies used:</p>
 
         <ul className="list-disc ml-4">
           <li>Vue JS</li>
@@ -72,9 +90,16 @@ const Portfolio = () => {
         imageName="acf_dt"
         imageAltText="Army Cadets website screenshot"
       >
-        <p>The site features a complex Vue app for managing applications to join the cadets, which interacts with a headless Laravel API.</p>
+        <p>
+          The site features a complex Vue app for managing applications to join
+          the cadets, which interacts with a headless Laravel API.
+        </p>
 
-        <p>The Craft CMS setup was also challenging, as ACF have different users for each county, and it's important that each county user only has permission to edit their own content.</p>
+        <p>
+          The Craft CMS setup was also challenging, as ACF have different users
+          for each county, and it's important that each county user only has
+          permission to edit their own content.
+        </p>
 
         <p>Technologies used:</p>
 
@@ -95,9 +120,17 @@ const Portfolio = () => {
         imageName="dh_website_dt"
         imageAltText="Dark Horses website screenshot"
       >
-        <p>The band wanted a fast-loading, simple site to act primarily as a hub for links to their content on other platforms.</p>
+        <p>
+          The band wanted a fast-loading, simple site to act primarily as a hub
+          for links to their content on other platforms.
+        </p>
 
-        <p>With that in mind, I used the static site generator 11ty to build the HTML from Markdown files on deployment, serving as little JavaScript as possible. The resulting pages are lightweight and blazing fast, scoring 95+ on Google PageSpeed Insights.</p>
+        <p>
+          With that in mind, I used the static site generator 11ty to build the
+          HTML from Markdown files on deployment, serving as little JavaScript
+          as possible. The resulting pages are lightweight and blazing fast,
+          scoring 95+ on Google PageSpeed Insights.
+        </p>
 
         <p>Technologies used:</p>
 
@@ -109,7 +142,7 @@ const Portfolio = () => {
         </ul>
       </Project>
     </div>
-  )
-}
+  );
+};
 
 export default Portfolio;

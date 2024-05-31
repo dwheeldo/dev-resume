@@ -1,6 +1,11 @@
 import { useMemo, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar, faLink, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendar,
+  faLink,
+  faPlus,
+  faMinus,
+} from '@fortawesome/free-solid-svg-icons';
 
 interface Props {
   projectName: string;
@@ -19,7 +24,7 @@ const Project = ({
   intro,
   imageName,
   imageAltText,
-  children
+  children,
 }: Props) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -39,17 +44,20 @@ const Project = ({
           {projectDate}
         </p>
 
-        {projectUrl &&
+        {projectUrl && (
           <a href={projectUrl} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLink} className="mr-2 w-4 h-4" />
             Visit site
           </a>
-        }
+        )}
       </div>
 
       <p>{intro}</p>
 
-      <div className={`mt-4 ${!isExpanded ? 'hidden' : ''}`} id={projectNameAsId}>
+      <div
+        className={`mt-4 ${!isExpanded ? 'hidden' : ''}`}
+        id={projectNameAsId}
+      >
         {children}
       </div>
 
@@ -66,11 +74,14 @@ const Project = ({
       </div>
 
       <picture>
-        <source type="image/webp" srcSet={`
+        <source
+          type="image/webp"
+          srcSet={`
           https://res.cloudinary.com/dosdlkfci/image/upload/c_scale,w_400/${imageName}.webp 400w,
           https://res.cloudinary.com/dosdlkfci/image/upload/c_scale,w_600/${imageName}.webp 600w,
           https://res.cloudinary.com/dosdlkfci/image/upload/c_scale,w_800/${imageName}.webp 800w
-        `} />
+        `}
+        />
 
         <img
           src={`https://res.cloudinary.com/dosdlkfci/image/upload/c_scale,w_800/${imageName}.jpg`}
@@ -85,10 +96,11 @@ const Project = ({
           alt={imageAltText}
           className="block mt-4"
           loading="lazy"
-          decoding="async" />
+          decoding="async"
+        />
       </picture>
     </div>
-  )
-}
+  );
+};
 
 export default Project;
