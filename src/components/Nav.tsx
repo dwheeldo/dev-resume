@@ -1,14 +1,30 @@
-import useAppContext from '../hooks/use-app-context';
+import { useState } from 'react';
 import NavItem from './NavItem';
 import SocialLinks from './SocialLinks';
 import avatarImage from '../img/dave-web.jpg';
+import { navItems } from '../lib/constants';
 import type { NavItemType } from '../types/interfaces';
 
 const Nav = () => {
-  const { navItems, navOpen, toggleNav } = useAppContext();
+  const [navOpen, setNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setNavOpen((val) => !val);
+  };
+
+  const closeNav = () => {
+    setNavOpen(false);
+  };
 
   const renderedNavItems = navItems.map((item: NavItemType) => {
-    return <NavItem key={item.label} to={item.path} name={item.label} />;
+    return (
+      <NavItem
+        key={item.label}
+        to={item.path}
+        name={item.label}
+        closeNav={closeNav}
+      />
+    );
   });
 
   const headerClasses = navOpen ? 'header mobile-nav-open' : 'header';
@@ -23,6 +39,7 @@ const Nav = () => {
             alt="Me"
             width="190"
             height="190"
+            loading="lazy"
           />
         </div>
 

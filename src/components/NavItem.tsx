@@ -1,14 +1,12 @@
 import { NavLink } from 'react-router-dom';
-import useAppContext from '../hooks/use-app-context';
 
 interface Props {
   to: string;
   name: string;
+  closeNav: () => void;
 }
 
-const NavItem = ({ to, name }: Props) => {
-  const { closeNav } = useAppContext();
-
+const NavItem = ({ to, name, closeNav }: Props) => {
   return (
     <NavLink
       className={({ isActive }) => {

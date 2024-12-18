@@ -1,6 +1,5 @@
 import { Routes, Route, useLocation, NavLink } from 'react-router-dom';
 import Home from '../pages/Home';
-import Skills from '../pages/Skills';
 import Work from '../pages/Work';
 import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
@@ -29,7 +28,6 @@ const Main = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
         <Route path="/work" element={<Work />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />

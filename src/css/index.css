@@ -93,4 +93,8 @@
   .mobile-nav-open .nav-toggle__bars::after {
     opacity: 0;
   }
+
+  .panel strong {
+    @apply text-orange-400 font-normal;
+  }
 }

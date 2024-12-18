@@ -1,10 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+import { MetaTitle } from '../components/MetaTitle';
 
 const Home = () => {
   return (
     <div className="">
+      <MetaTitle title="Home" />
       <p className="h1 text-orange-400 mb-4">
         <FontAwesomeIcon icon={faTerminal} />
       </p>
@@ -22,14 +24,10 @@ const Home = () => {
         Check out my{' '}
         <NavLink to="/portfolio" className="text-orange-400">
           portfolio
-        </NavLink>
-        ,{' '}
-        <NavLink to="/work" className="text-orange-400">
-          work history
         </NavLink>{' '}
         and{' '}
-        <NavLink to="/skills" className="text-orange-400">
-          skills
+        <NavLink to="/work" className="text-orange-400">
+          work history
         </NavLink>{' '}
         to see if I can help you build something great.
       </p>

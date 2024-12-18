@@ -1,16 +1,18 @@
 import { faHistory } from '@fortawesome/free-solid-svg-icons';
 import Title from '../components/Title';
 import Panel from '../components/Panel';
+import { MetaTitle } from '../components/MetaTitle';
 
 const Work = () => {
   return (
     <div className="">
+      <MetaTitle title="Work history" />
       <Title text="Work history" icon={faHistory} />
 
       <ul className="-mb-2">
         <Panel>
           <h2 className="text-base leading-none font-semibold mb-1 lg:text-lg">
-            Front-end Developer
+            Front-end Engineer
           </h2>
           <p>
             <a
@@ -26,21 +28,24 @@ const Work = () => {
 
           <ul className="list-disc ml-4">
             <li className="mb-2">
-              Worked on the front-end of Lickd, a server-rendered React
-              application used to license music for YouTube and other streaming
-              services.
+              Worked on the front-end of Lickd, a React / Express app used to
+              license music for YouTube and other streaming services.
+            </li>
+            <li className="mb-2">
+              Led the front-end implementation of several new features,
+              including the introduction of a completely new subscription model.
             </li>
             <li className="mb-2">
               Integrated with multiple back-end APIs, using both JSON and
               GraphQL.
             </li>
             <li className="mb-2">
-              Implemented and wrote Jira tickets, working closely with the
+              Wrote and completed Jira tickets, working closely with the
               company's QA department.
             </li>
             <li>
-              Collaborated with the rest of the dev team to streamline
-              processes.
+              Streamlined front-end development processes and updated third
+              party packages to enable modern React features.
             </li>
           </ul>
         </Panel>
@@ -127,20 +132,6 @@ const Work = () => {
             <li>
               Helped build a Carbon Emissions Calculator application using React
               and Redux.
-            </li>
-          </ul>
-        </Panel>
-
-        <Panel>
-          <h2 className="text-base leading-none font-semibold mb-1 lg:text-lg">
-            E-learning Scriptwriter / Developer
-          </h2>
-          <p>2008 - 2019</p>
-
-          <ul className="list-disc ml-4">
-            <li>
-              Wrote copy and developed online training for clients including
-              PepsiCo, O2 and IBM.
             </li>
           </ul>
         </Panel>

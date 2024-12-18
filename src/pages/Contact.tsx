@@ -1,9 +1,11 @@
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import Title from '../components/Title';
+import { MetaTitle } from '../components/MetaTitle';
 
 const Contact = () => {
   return (
     <div className="">
+      <MetaTitle title="Contact" />
       <Title text="Contact" icon={faPaperPlane} />
 
       <p>

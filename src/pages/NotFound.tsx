@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import Title from '../components/Title';
 import { faBug } from '@fortawesome/free-solid-svg-icons';
+import { MetaTitle } from '../components/MetaTitle';
 
 const NotFound = () => {
   return (
     <div className="">
+      <MetaTitle title="Page not found" />
       <Title text="404: not found" icon={faBug} />
 
       <p className="text-lg">

@@ -1,10 +1,12 @@
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import Title from '../components/Title';
 import Project from '../components/Project';
+import { MetaTitle } from '../components/MetaTitle';
 
 const Portfolio = () => {
   return (
     <div>
+      <MetaTitle title="Portfolio" />
       <Title text="Portfolio" icon={faBriefcase} />
 
       <p>A selection of projects I've enjoyed working on.</p>
