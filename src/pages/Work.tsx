@@ -29,7 +29,7 @@ const Work = () => {
           <ul className="list-disc ml-4">
             <li className="mb-2">
               Worked on the front-end of Lickd, a React / Express app used to
-              license music for YouTube and other streaming services.
+              license music for YouTube and other video platforms.
             </li>
             <li className="mb-2">
               Led the front-end implementation of several new features,
