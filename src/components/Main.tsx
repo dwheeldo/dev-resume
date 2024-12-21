@@ -15,7 +15,7 @@ const Main = () => {
 
   return (
     <main className="w-full max-w-screen-md mx-auto px-4 py-8 md:p-8 lg:p-12">
-      <div className="pb-4 mb-6 border-b border-orange-400 border-dashed">
+      <div className="pb-4 mb-8 border-b border-orange-400 border-dashed">
         <NavLink
           to="/"
           className="block mb-1 no-underline"

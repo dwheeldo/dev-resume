@@ -8,7 +8,7 @@ interface Props {
 
 const Title = ({ text, icon }: Props) => {
   return (
-    <h1 className="text-orange-400 mb-4">
+    <h1 className="text-orange-400 mb-8">
       {icon && <FontAwesomeIcon icon={icon} className="mr-2" />}
       {text}
     </h1>

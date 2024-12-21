@@ -9,7 +9,7 @@ const Work = () => {
       <MetaTitle title="Work history" />
       <Title text="Work history" icon={faHistory} />
 
-      <ul className="-mb-2">
+      <div className="-mb-4">
         <Panel>
           <h2 className="text-base leading-none font-semibold mb-1 lg:text-lg">
             Front-end Engineer
@@ -36,16 +36,21 @@ const Work = () => {
               including the introduction of a completely new subscription model.
             </li>
             <li className="mb-2">
-              Integrated with multiple back-end APIs, using both JSON and
-              GraphQL.
+              Worked closely with the back-end team to ensure stable and
+              efficient communication with the front-end via REST and GraphQL
+              APIs.
             </li>
             <li className="mb-2">
-              Wrote and completed Jira tickets, working closely with the
-              company's QA department.
+              Wrote RFCs suggesting future improvements to the platform, along
+              with potential implementation solutions.
+            </li>
+            <li className="mb-2">
+              Wrote, prioritised and completed Jira tickets alongside the
+              company's QA and product departments.
             </li>
             <li>
-              Streamlined front-end development processes and updated third
-              party packages to enable modern React features.
+              Streamlined front-end development processes and updated the
+              environment to enable modern React features.
             </li>
           </ul>
         </Panel>
@@ -135,7 +140,7 @@ const Work = () => {
             </li>
           </ul>
         </Panel>
-      </ul>
+      </div>
     </div>
   );
 };
