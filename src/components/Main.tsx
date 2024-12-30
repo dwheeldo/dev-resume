@@ -4,13 +4,17 @@ import Work from '../pages/Work';
 import Portfolio from '../pages/Portfolio';
 import Contact from '../pages/Contact';
 import NotFound from '../pages/NotFound';
-import { useMemo } from 'react';
+import { useLayoutEffect, useMemo } from 'react';
 
 const Main = () => {
   const { pathname } = useLocation();
 
   const HeadingEl = useMemo(() => {
     return pathname === '/' ? 'h1' : 'p';
+  }, [pathname]);
+
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
   }, [pathname]);
 
   return (
